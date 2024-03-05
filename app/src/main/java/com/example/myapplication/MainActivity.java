@@ -1,7 +1,7 @@
 package com.example.myapplication;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.ViewGroup;
@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +23,6 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements DatePickerDialog.OnDateSetListener {
@@ -33,12 +31,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     List<View> addedPhones = new ArrayList<>();
     private TextView dateText;
 
-    private int countClicks = 0;
-    private String Name;
-    private String Surname;
-    private String City;
-    private String Birth;
-    private int Department;
     private int[] Phones;
 
     private TextView counterText;
@@ -48,6 +40,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        activityB();
 
         final EditText name = findViewById(R.id.name_input);
         final EditText surname = findViewById(R.id.surname_input);
@@ -60,17 +54,17 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
         // Recover the instance state.
         prefs = getPreferences(MODE_PRIVATE);
 
-        Name = prefs.getString("name", null);
-        Surname = prefs.getString("surname", null);
-        City = prefs.getString("city", null);
-        Birth = prefs.getString("birth", null);
-        Department = prefs.getInt("department", 0);
+        String name1 = prefs.getString("name", null);
+        String surname1 = prefs.getString("surname", null);
+        String city1 = prefs.getString("city", null);
+        String birth1 = prefs.getString("birth", null);
+        int department = prefs.getInt("department", 0);
 
-        name.setText(Name);
-        surname.setText(Surname);
-        city.setText(City);
-        birth.setText(Birth);
-        departments.setSelection(Department);
+        name.setText(name1);
+        surname.setText(surname1);
+        city.setText(city1);
+        birth.setText(birth1);
+        departments.setSelection(department);
 
         final Button validate = findViewById(R.id.validate);
         validate.setOnClickListener(new View.OnClickListener() {
@@ -100,6 +94,20 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
             @Override
             public void onClick(View v) {
                 showDatePickerDialog();
+            }
+        });
+    }
+
+    private void activityB() {
+        final EditText questionEditText = findViewById(R.id.questionEditText);
+        Button submitQuestionButton = findViewById(R.id.submitQuestionButton);
+
+        submitQuestionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ActivityB.class);
+                intent.putExtra("QUESTION", questionEditText.getText().toString());
+                startActivity(intent);
             }
         });
     }
