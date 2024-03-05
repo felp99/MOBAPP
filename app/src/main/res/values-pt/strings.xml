@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Minha aplicação</string>
+    <string name="name">Nome</string>
+    <string name="surname">Sobrenome</string>
+    <string name="birth_date">Data de Nascimento</string>
+    <string name="city">Cidade</string>
+    <string name="validate">Validação</string>
+    <string name="reset">Recomeçar</string>
+    <string name="add_cellphone">Adicionar número de telefone</string>
+    <string name="label_phone">Número de telefone</string>
+    <string name="X">X</string>
+    <string name="label_departments">Departamentos</string>
+    <string name="pick_date">Selecione uma data</string>
+    <string name="show_dialog">Mostrar caixa de diálogo</string>
+    <string name="phone">Telefone</string>
+</resources>
