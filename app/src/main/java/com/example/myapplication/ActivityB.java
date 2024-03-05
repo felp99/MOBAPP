@@ -11,16 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import androidx.core.view.WindowCompat;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
 
 import com.example.myapplication.databinding.ActivityBBinding;
 
 public class ActivityB extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
     private ActivityBBinding binding;
 
     @Override
@@ -37,12 +32,5 @@ public class ActivityB extends AppCompatActivity {
                 Snackbar.make(v, answerEditText.getText().toString(), Snackbar.LENGTH_LONG).show();
             }
         });
-    }
-
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_activity_b);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
     }
 }

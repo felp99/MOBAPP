@@ -205,8 +205,4 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
         Snackbar.make(findViewById(R.id.c_layout), snackResponse, Snackbar.LENGTH_LONG).show();
     }
-
-
-
-
 }
