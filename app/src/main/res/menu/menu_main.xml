@@ -3,7 +3,11 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/reset"
-        android:onClick="resetAction"
-        android:title="@string/reset" />
+        android:id="@+id/action_wikipedia"
+        android:title="@string/wikipedia"
+        android:icon="@android:drawable/ic_menu_search"/>
+    <item
+        android:id="@+id/action_share"
+        android:title="Partager la ville"
+        android:icon="@android:drawable/ic_menu_share"/>
 </menu>
