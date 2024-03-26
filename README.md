@@ -1,6 +1,6 @@
 # Android Fragment Demo Project
 
-This project demonstrates the use of Android Fragments to insert and display information within an application, incorporating a specific fragment for date selection. It is structured to provide an example of effective communication between fragments, showcasing best practices in Android development.
+This project demonstrates the use of Android Fragments to insert and display information within an application, incorporating a specific fragment for date selection. It is structured to provide an example of effective communication between fragments, showcasing best practices in Android development. User has also the hability to turn the display without loosing data.
 
 ## Project Setup
 
@@ -8,24 +8,16 @@ This project demonstrates the use of Android Fragments to insert and display inf
 
 #### InsertInfoFragment
 
-![image](https://github.com/felp99/MOBAPP/assets/76445505/6a309d38-edd1-46e3-9613-1d5fb7754a7c)
+![01](https://github.com/felp99/MOBAPP/assets/76445505/19fa146d-556d-4afa-ba3b-fc893b86d599)
 
 #### DatePickerFragment
 
-![image](https://github.com/felp99/MOBAPP/assets/76445505/805355f1-a15e-4feb-99e3-ed6a8fde7bfc)
+![04](https://github.com/felp99/MOBAPP/assets/76445505/3b501f86-f0f8-43b5-af62-a6ca7cd11653)
 
 #### ShowInfoFragment
 
-![image](https://github.com/felp99/MOBAPP/assets/76445505/c309996b-6ccb-4b7d-aeca-2ec793aa9b89)
-
-![image](https://github.com/felp99/MOBAPP/assets/76445505/6e3e82fd-c547-41f5-92fb-ed1782258213)
-
-#### Turn display functionally 
-
-![image](https://github.com/felp99/MOBAPP/assets/76445505/94f1db00-399c-4d46-9b60-739ae8ec65f5)
-
-![image](https://github.com/felp99/MOBAPP/assets/76445505/16e6683f-f973-4199-a4ca-324a6632095a)
-
+![02](https://github.com/felp99/MOBAPP/assets/76445505/ca571d2c-91e9-49b6-8ccf-23e32198fb34)
+![03](https://github.com/felp99/MOBAPP/assets/76445505/53e4d380-d90a-4c65-ae39-35213843a072)
 
 ### Prerequisites
 
